@@ -1,10 +1,12 @@
 # vibe-stock-analysis
 
+[English](README.en.md) · **简体中文**
+
 **用你已经在用的 Agent 和模型额度做个股研究。**
 
 `vibe-stock-analysis` 把 Vibe-Trading 的部分个股研究工具移植为可独立运行的 Agent Skill。它适用于 OpenAI Codex、Google Antigravity 和其他支持 Agent Skills 的客户端。你可以直接问「英伟达现在的估值合理吗？」或「帮我看看微软的技术面」。[Agent Skills 规范](https://agentskills.io/specification)
 
-安装只需 Python 和 Skill 文件。这样可以省去部署 Vibe-Trading 服务、在第二个项目中配置模型 API Key，以及为这套研究工具另外支付一笔按量计费的模型 API 费用。Python 工具获取数据和计算指标，宿主用当前模型生成分析。使用量按宿主现有账号、订阅或 API 方案计算。
+安装只需 Python 和 Skill 文件。这样可以省去部署 Vibe-Trading 服务、在第二个项目中配置模型 API Key，以及为这套研究工具另外支付一笔按量计费的模型 API 费用。Python 工具获取数据并计算指标，由用户选用的模型生成分析。使用量计入用户现有的账号、订阅或 API 方案。
 
 ## 能做什么
 
@@ -20,7 +22,7 @@
 
 1. 准备 Python 3.10 或更新版本，下载 [最新 Release 的 Skill ZIP](https://github.com/zhouquanhan/vibe-stock-analysis/releases/latest)。
 2. 解压后将完整的 `vibe-stock-analysis/` 复制到项目的 `.agents/skills/`。确认 `SKILL.md` 位于 `.agents/skills/vibe-stock-analysis/SKILL.md`。
-3. 在 Codex 或 Antigravity 中打开该项目并新建会话，输入「帮我看看英伟达最新报价，标注时间和来源」。在线数据查询需要宿主终端能访问公共金融数据接口。
+3. 在 Codex 或 Antigravity 中打开该项目并新建会话，输入「帮我看看英伟达最新报价，标注时间和来源」。查询在线数据时，请确保终端可以访问公共金融数据接口。
 
 安装后，可以从项目根目录运行以下命令验证报价。
 
