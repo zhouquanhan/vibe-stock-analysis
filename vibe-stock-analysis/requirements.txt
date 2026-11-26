@@ -1,0 +1,6 @@
+# Optional market-data enhancement and fallback. The HTTP providers run without yfinance.
+yfinance>=1.0,<2.0
+# Used by zoneinfo on platforms without a system IANA time-zone database.
+tzdata>=2025.2
+# Use the platform trust store on hosts with managed proxy certificates.
+truststore>=0.10,<1
